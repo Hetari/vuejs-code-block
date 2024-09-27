@@ -1,0 +1,4 @@
+**/node_modules
+dist
+**/just-test/
+**/vuejs-code-block/

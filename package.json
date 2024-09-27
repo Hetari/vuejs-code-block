@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "author": "Ebraheem Alhetari <https://github.com/hetari> (https://github.com/hetari)",
+  "workspaces": [
+    "packages/*"
+  ]
+}
