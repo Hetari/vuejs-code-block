@@ -21,10 +21,9 @@ export default defineConfig({
   build: {
     target: 'es2015',
     lib: {
-      entry: resolve(__dirname, 'src/main.ts'),
+      entry: resolve(__dirname, 'src/index.ts'),
       name: 'VueJsCodeBlock',
-      fileName: (format) => `index.${format === 'es' ? 'mjs' : 'cjs'}`,
-
+      fileName: 'index',
       formats: ['es', 'cjs']
     },
     rollupOptions: {
@@ -32,7 +31,8 @@ export default defineConfig({
       output: {
         globals: {
           vue: 'Vue'
-        }
+        },
+        exports: 'named'
       }
     }
   }
