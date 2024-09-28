@@ -1,7 +1,62 @@
 {
-  "private": true,
-  "author": "Ebraheem Alhetari <https://github.com/hetari> (https://github.com/hetari)",
-  "workspaces": [
-    "packages/*"
-  ]
+  "type": "module",
+  "private": false,
+  "name": "vuejs-code-block",
+  "version": "0.0.9-beta",
+  "description": "A Vue 3 component of unstyled UI components to build powerful code blocks.",
+  "author": {
+    "name": "Ebraheem Alhetari",
+    "email": "hetari4all@gmail.com",
+    "url": "https://github.com/hetari"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hetari/vuejs-code-block.git"
+  },
+  "keywords": [
+    "code-block",
+    "code-blocks",
+    "snippets",
+    "syntax-highlighting",
+    "unstyled",
+    "ui component",
+    "vue3",
+    "typescript",
+    "javascript"
+  ],
+  "homepage": "https://github.com/hetari/vuejs-code-block",
+  "bugs": {
+    "url": "https://github.com/hetari/vuejs-code-block/issues"
+  },
+  "types": "./vuejs-code-block.d.ts",
+  "module": "dist/index.mjs",
+  "main": "dist/index.cjs",
+  "files": [
+    "dist/",
+    "vuejs-code-block.d.ts"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "dependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "semantic-release": "^24.1.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vite-plugin-dts": "^4.2.2",
+    "vue-tsc": "^2.0.29"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
