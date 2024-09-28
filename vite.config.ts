@@ -1,17 +1,15 @@
 import { fileURLToPath, URL } from 'node:url';
-
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 import dts from 'vite-plugin-dts';
-// import vueJsx from "@vitejs/plugin-vue-jsx";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    dts()
-    // vueJsx()
+    dts({
+      insertTypesEntry: true
+    })
   ],
   resolve: {
     alias: {
@@ -21,18 +19,18 @@ export default defineConfig({
   build: {
     target: 'es2015',
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: resolve(__dirname, 'src/index.ts'), // Your library entry point
       name: 'VueJsCodeBlock',
-      fileName: 'index',
-      formats: ['es', 'cjs']
+      fileName: 'index', // Output file name
+      formats: ['es', 'cjs'] // Output formats
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue'], // Externalize dependencies
       output: {
         globals: {
-          vue: 'Vue'
+          vue: 'Vue' // Global variable for Vue
         },
-        exports: 'named'
+        exports: 'named' // Control export style
       }
     }
   }

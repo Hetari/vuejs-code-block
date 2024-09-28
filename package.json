@@ -2,7 +2,7 @@
   "type": "module",
   "private": false,
   "name": "vuejs-code-block",
-  "version": "0.0.12-test",
+  "version": "0.0.16-test",
   "description": "A Vue 3 component of unstyled UI components to build powerful code blocks.",
   "author": {
     "name": "Ebraheem Alhetari",
@@ -29,12 +29,12 @@
   "bugs": {
     "url": "https://github.com/hetari/vuejs-code-block/issues"
   },
-  "types": "dist/types/vuejs-code-block.d.ts",
-  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "files": [
     "dist/",
-    "typings/index.d.ts"
+    "README.md"
   ],
   "scripts": {
     "dev": "vite",

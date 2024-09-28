@@ -1,16 +1,10 @@
-// import VuejsCodeBlock from './components/vuejs-code-block/VuejsCodeBlock.vue';
-
-// export * from './components/vuejs-code-block';
-
-// export { default as VuejsCodeBlock } from './components/vuejs-code-block/VuejsCodeBlock.vue'; // Ensure you have this line for default export
-
+// src/index.ts
 import VuejsCodeBlock from './components/vuejs-code-block/VuejsCodeBlock.vue';
 
-// Export the VuejsCodeBlock as the default export
+// Export the component as the default export
 export default VuejsCodeBlock;
 
-// Re-export the install function as a named export
+// Export any named exports if needed
 export { install } from './components/';
 
-// Re-export everything from vuejs-code-block
-export * from './components/vuejs-code-block';
+export * from './components/vuejs-code-block/index';
