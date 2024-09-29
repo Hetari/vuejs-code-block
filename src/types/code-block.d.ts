@@ -6,6 +6,6 @@ declare module 'code-block' {
     code: string;
   }
 
-  const CodeBlock: DefineComponent<CodeBlockProps>;
-  export { CodeBlock };
+  const CodeBlockType: DefineComponent<CodeBlockProps>;
+  export { CodeBlockType };
 }

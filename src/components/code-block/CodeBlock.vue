@@ -5,14 +5,15 @@
 
 <script setup lang="ts">
   import { defineComponent, toRefs } from 'vue';
-  import { codeBlockProps } from './types';
+  import { codeBlockProps, codeBlockInstance } from './types';
   import { useCodeBlock } from './use-code-block';
+  import { CodeBlockType } from 'code-block';
 
   defineProps(codeBlockProps());
-  defineComponent({
+  defineComponent<codeBlockInstance>({
     name: 'CodeBlock',
     props: codeBlockProps(),
-    setup(props) {
+    setup(props: codeBlockProps) {
       useCodeBlock(toRefs(props));
     }
   });
