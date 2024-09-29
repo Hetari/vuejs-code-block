@@ -14,7 +14,7 @@ export const vuejsCodeBlockProps = () =>
     }
   } as const);
 
-export type InnerVueToPrintProps = ExtractPropTypes<
+export type VuejsCodeBlockProps = ExtractPropTypes<
   ReturnType<typeof vuejsCodeBlockProps>
 >;
 
@@ -29,7 +29,7 @@ export type VuejsCodeBlockExpose = {
 };
 
 export type VuejsCodeBlockInstance = ComponentPublicInstance<
-  InnerVueToPrintProps,
+  VuejsCodeBlockProps,
   VuejsCodeBlockExpose
 >;
 

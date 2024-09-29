@@ -34,7 +34,8 @@
   "module": "dist/index.js",
   "files": [
     "dist/",
-    "README.md"
+    "README.md",
+    "types/global.d.ts"
   ],
   "scripts": {
     "dev": "vite",
