@@ -11,5 +11,5 @@
 </template>
 
 <script setup lang="ts">
-  import { VuejsCodeBlock } from '../dist';
+  // import { VuejsCodeBlock } from '../dist';
 </script>

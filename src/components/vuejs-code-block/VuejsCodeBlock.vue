@@ -3,12 +3,13 @@
   ss code: {{ code }}
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
   import { defineComponent, toRefs } from 'vue';
   import { vuejsCodeBlockProps } from './types';
   import { useVuejsCodeBlock } from './use-vuejs-code-block';
 
-  export default defineComponent({
+  defineProps(vuejsCodeBlockProps());
+  defineComponent({
     name: 'VuejsCodeBlock',
     props: vuejsCodeBlockProps(),
     setup(props) {
