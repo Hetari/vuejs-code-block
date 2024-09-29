@@ -1,5 +1,5 @@
 import { toValue } from 'vue';
-import { PublicVuejsCodeBlockProps } from './types';
+import { PublicCodeBlockProps } from './types';
 
 /**
  * The default props in Vue are set within vuejs-code-block too.
@@ -11,7 +11,7 @@ const defaultProps = {
   code: 'Some defult code'
 };
 
-export function useVuejsCodeBlock(props: PublicVuejsCodeBlockProps) {
+export function useCodeBlock(props: PublicCodeBlockProps) {
   props = { ...defaultProps, ...props };
 
   // Extract reactive values if necessary using toValue (for Vue's reactivity)

@@ -1,3 +1,3 @@
-import { VuejsCodeBlock } from './vuejs-code-block/index';
+import { CodeBlock } from './code-block/index';
 
-export { VuejsCodeBlock };
+export { CodeBlock };

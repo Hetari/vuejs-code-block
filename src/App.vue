@@ -2,8 +2,8 @@
   <div>App.vue</div>
   Test:
   <pre>
-    <VuejsCodeBlock code="'sss'" />
-    <VuejsCodeBlock code="123" />
+    <CodeBlock code="'sss'" />
+    <CodeBlock code="123" />
   </pre>
   End of Test
   <br />
@@ -11,5 +11,5 @@
 </template>
 
 <script setup lang="ts">
-  // import { VuejsCodeBlock } from '../dist';
+  import { CodeBlock } from '../dist';
 </script>

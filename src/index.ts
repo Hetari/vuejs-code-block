@@ -1,6 +1,6 @@
 // import VuejsCodeBlock from './components/vuejs-code-block/VuejsCodeBlock.vue';
-import { VuejsCodeBlock } from './components/components';
-export { VuejsCodeBlock };
+import { CodeBlock } from './components/components';
+export { CodeBlock };
 
 export { install } from './components/';
-export * from './components/vuejs-code-block/index';
+export * from './components/code-block/index';
