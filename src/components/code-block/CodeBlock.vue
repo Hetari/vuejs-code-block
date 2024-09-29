@@ -13,7 +13,6 @@
     name: 'CodeBlock',
     props: codeBlockProps(),
     setup(props) {
-      // const codeBlockProps =
       useCodeBlock(toRefs(props));
     }
   });
