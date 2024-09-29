@@ -7,5 +7,5 @@ declare module 'code-block' {
   }
 
   const CodeBlock: DefineComponent<CodeBlockProps>;
-  export default CodeBlock;
+  export { CodeBlock };
 }

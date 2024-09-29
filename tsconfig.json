@@ -1,14 +1,8 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "outDir": "./dist",
     "declarationDir": "./dist/types",
-    "emitDeclarationOnly": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "moduleResolution": "node",
-    "jsx": "preserve"
+    "emitDeclarationOnly": true
   },
   "include": [
     "src/**/*.ts",
@@ -17,6 +11,5 @@
     "types/**/*.ts",
     "types/**/*.tsx",
     "types/**/*.vue"
-  ],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  ]
 }

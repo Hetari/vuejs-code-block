@@ -8,7 +8,8 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      insertTypesEntry: true
+      insertTypesEntry: true,
+      tsconfigPath: './tsconfig.json'
     })
   ],
   resolve: {
