@@ -52,12 +52,13 @@ export interface UseCodeBlockProps {
 }
 
 // Props goes here
-
-export type PublicCodeBlockProps = Partial<Omit<UseCodeBlockProps, 'code'>> &
-  Partial<Omit<UseCodeBlockProps, 'class'>> &
-  Partial<Omit<UseCodeBlockProps, 'id'>> &
-  Partial<Omit<UseCodeBlockProps, 'id'>> &
-  Pick<UseCodeBlockProps, 'class'> &
-  Pick<UseCodeBlockProps, 'code'>;
+// The type `PublicCodeBlockProps` allows optional properties from UseCodeBlockProps,
+// but ensures that properties are required.
+export type PublicCodeBlockProps = Partial<
+  // Omit properties from UseCodeBlockProps to make the remaining props optional
+  Omit<UseCodeBlockProps, 'code' | 'class' | 'id'>
+> &
+  // Then explicitly pick properties from UseCodeBlockProps to make them required
+  Pick<UseCodeBlockProps, 'code' | 'class' | 'id'>;
 
 export type PropertyFunction<T> = () => T;
