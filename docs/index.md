@@ -7,7 +7,7 @@ hero:
   text: "Unstyled UI components to build powerful code blocks in Vue3"
   tagline: Share it smoothly
   image:
-    src: /images/logo.png
+    src: /logo.png
     alt: Vuejs Code Block Logo
   actions:
     - theme: brand
