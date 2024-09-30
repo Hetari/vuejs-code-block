@@ -8,7 +8,7 @@ export default defineConfig({
   description: 'Unstyled UI components to build powerful code blocks in Vue3',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/images/logo.svg',
+    logo: 'vuejs-code-block/images/logo.svg',
     nav: [
       {
         text: 'Home',
