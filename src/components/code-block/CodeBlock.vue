@@ -1,13 +1,14 @@
 <template>
-  <div>Vuejs Code Block</div>
-  ss code: {{ code }}
+  <div :class="class">Vuejs Code Block</div>
+  {{ code }} <br /><br />
+  Block Class: {{ class }}
 </template>
 
 <script setup lang="ts">
   import { defineComponent, toRefs } from 'vue';
   import { codeBlockProps, codeBlockInstance } from './types';
   import { useCodeBlock } from './use-code-block';
-  import { CodeBlockType } from 'code-block';
+  // import { CodeBlockType } from 'code-block';
 
   defineProps(codeBlockProps());
   defineComponent<codeBlockInstance>({

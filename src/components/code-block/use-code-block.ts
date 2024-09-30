@@ -7,8 +7,10 @@ import { PublicCodeBlockProps } from './types';
 // NOTE: https://github.com/Microsoft/TypeScript/issues/23812
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
+// Props goes here
 const defaultProps = {
-  code: 'Some defult code'
+  code: '',
+  class: ''
 };
 
 export function useCodeBlock(props: PublicCodeBlockProps) {
