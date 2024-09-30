@@ -14,6 +14,11 @@ export const codeBlockProps = () =>
       required: false,
       default: ''
     },
+    id: {
+      type: String as PropType<string>,
+      required: false,
+      default: ''
+    },
     code: {
       type: String as PropType<string>,
       required: true
@@ -39,15 +44,20 @@ export type codeBlockInstance = ComponentPublicInstance<
   codeBlockExpose
 >;
 
+// Props goes here
 export interface UseCodeBlockProps {
-  code: MaybeRefOrGetter<string>;
   class: MaybeRefOrGetter<string | null>;
+  id: MaybeRefOrGetter<string | null>;
+  code: MaybeRefOrGetter<string>;
 }
 
 // Props goes here
+
 export type PublicCodeBlockProps = Partial<Omit<UseCodeBlockProps, 'code'>> &
-  Pick<UseCodeBlockProps, 'code'> &
   Partial<Omit<UseCodeBlockProps, 'class'>> &
-  Pick<UseCodeBlockProps, 'class'>;
+  Partial<Omit<UseCodeBlockProps, 'id'>> &
+  Partial<Omit<UseCodeBlockProps, 'id'>> &
+  Pick<UseCodeBlockProps, 'class'> &
+  Pick<UseCodeBlockProps, 'code'>;
 
 export type PropertyFunction<T> = () => T;

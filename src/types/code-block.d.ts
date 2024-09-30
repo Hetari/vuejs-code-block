@@ -4,8 +4,9 @@ declare module 'code-block' {
   // Define the expected props interface
   // Props goes here
   interface CodeBlockProps {
-    code: string;
     class: string;
+    id: string;
+    code: string;
   }
 
   const CodeBlockType: DefineComponent<CodeBlockProps>;

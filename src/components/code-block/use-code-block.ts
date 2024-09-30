@@ -9,8 +9,9 @@ import { PublicCodeBlockProps } from './types';
 
 // Props goes here
 const defaultProps = {
-  code: '',
-  class: ''
+  class: '',
+  id: '',
+  code: ''
 };
 
 export function useCodeBlock(props: PublicCodeBlockProps) {

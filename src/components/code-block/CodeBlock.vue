@@ -1,7 +1,10 @@
 <template>
-  <div :class="class">Vuejs Code Block</div>
-  {{ code }} <br /><br />
-  Block Class: {{ class }}
+  <div
+    :class="class"
+    :id="id">
+    Vuejs Code Block
+  </div>
+  {{ code }}
 </template>
 
 <script setup lang="ts">
