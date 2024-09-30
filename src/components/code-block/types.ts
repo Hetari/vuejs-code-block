@@ -29,7 +29,7 @@ export type codeBlockProps = ExtractPropTypes<
   ReturnType<typeof codeBlockProps>
 >;
 
-export type codeBlockType = {
+export type codeBlockSlot = {
   default: Slot;
   trigger: Slot;
 };

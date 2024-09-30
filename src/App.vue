@@ -9,7 +9,7 @@
     id="my-id"
     code="'sss'" />
   <CodeBlock code="'123'" />
-  <CodeBlock code="'123sds'"> ٍSlot here </CodeBlock>
+  <CodeBlock code="'123sds'"> s </CodeBlock>
   </pre>
   </code>
   End of App.vue
