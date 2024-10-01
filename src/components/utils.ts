@@ -1,6 +1,5 @@
-import 'prismjs/themes/prism.css';
 import { highlight, languages } from 'prismjs';
-// import 'prismjs-components-importer/esm';
+import 'prismjs/themes/prism-tomorrow.min.css';
 
 export function highlightedCode(code: string, language: string) {
   if (code === null || code === undefined) {
@@ -23,7 +22,10 @@ export function highlightedCode(code: string, language: string) {
   return highlight(code, prismLanguage, language);
 }
 
-export function parseCodeIntoLines(code: string): string[] {
+export function parseCodeIntoLines(
+  code: string,
+  language: string = 'markup'
+): string[] {
   if (typeof code !== 'string') {
     throw new Error('Provided code must be a string');
   }
@@ -31,5 +33,8 @@ export function parseCodeIntoLines(code: string): string[] {
   return code
     .split(/\r?\n/)
     .map((line) => line.trim())
-    .filter((l) => l.length > 0);
+    .filter((l) => l.length > 0)
+    .map((line) => {
+      return highlightedCode(line, language);
+    });
 }

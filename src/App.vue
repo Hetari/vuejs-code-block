@@ -4,7 +4,7 @@
     class="my-class"
     id="my-id"
     :code="code"
-    language="js"
+    language="py"
     code-class="codeClass"
     :lines-highlighted="[1, 2]"
     :words-highlighted="['log']"
@@ -15,8 +15,8 @@
 <script setup lang="ts">
   import { CodeBlock } from '../dist';
   const code = `console.log('Hello');
-                const name = 'World';
-                `;
+  const name = 'World';
+  `;
 </script>
 
 <style>
@@ -24,9 +24,10 @@
     color: rgb(65, 24, 24);
     border: 1px solid red;
     border-radius: 10px;
+    font-size: 16px;
   }
   #my-id {
-    background-color: rgb(107, 194, 126);
+    /* background-color: rgb(0, 0, 0); */
     padding: 25px;
   }
 </style>

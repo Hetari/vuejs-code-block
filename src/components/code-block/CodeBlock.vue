@@ -17,7 +17,7 @@
   // TODO: add theme
   const rootContext = computed(() => ({
     // codeClass: props.codeClass,
-    code: parseCodeIntoLines(props.code),
+    code: parseCodeIntoLines(props.code, props.language),
     language: props.language,
     linesHighlighted: props.linesHighlighted,
     wordsHighlighted: props.wordsHighlighted,
