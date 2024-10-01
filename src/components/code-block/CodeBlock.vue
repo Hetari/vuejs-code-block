@@ -2,10 +2,6 @@
   <div
     :class="class"
     :id="id">
-    userCode: <br />
-    {{ userCode }}
-    <br />
-    <br />
     <code
       :class="codeClass"
       v-html="userCode"></code>
