@@ -6,7 +6,7 @@ import type {
 } from 'vue';
 
 type CodeProps = {
-  code: string;
+  code: string[];
   language: string;
   linesHighlighted: string[] | number[];
   wordsHighlighted: string[];

@@ -10,13 +10,14 @@
   import { computed, defineComponent, toRefs } from 'vue';
   import { codeBlockProps, codeBlockInstance } from './types';
   import { useCodeBlock } from './use-code-block';
+  import { parseCodeIntoLines } from './utils';
 
   const props = defineProps(codeBlockProps());
 
   // TODO: add theme
   const rootContext = computed(() => ({
     // codeClass: props.codeClass,
-    code: props.code.trim(),
+    code: parseCodeIntoLines(props.code),
     language: props.language,
     linesHighlighted: props.linesHighlighted,
     wordsHighlighted: props.wordsHighlighted,

@@ -1,7 +1,9 @@
 <template>
   Test:
   <CodeBlock
-    code="console.log('Hello, ' + name)"
+    class="my-class"
+    id="my-id"
+    :code="code"
     language="js"
     code-class="codeClass"
     :lines-highlighted="[1, 2]"
@@ -12,14 +14,19 @@
 
 <script setup lang="ts">
   import { CodeBlock } from '../dist';
+  const code = `console.log('Hello');
+                const name = 'World';
+`;
 </script>
 
 <style>
   .my-class {
-    color: rgb(65, 24, 24) !important;
-    border: 1px solid red !important;
+    color: rgb(65, 24, 24);
+    border: 1px solid red;
+    border-radius: 10px;
   }
   #my-id {
-    background-color: rgb(107, 194, 126) !important;
+    background-color: rgb(107, 194, 126);
+    padding: 25px;
   }
 </style>

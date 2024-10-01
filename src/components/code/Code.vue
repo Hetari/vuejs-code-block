@@ -2,6 +2,7 @@
   <component
     :is="value.asElement || 'pre'"
     v-bind="$attrs">
+    <template></template>
     {{ value }}
   </component>
 </template>
@@ -15,9 +16,9 @@
   const props = defineProps(codeProps());
 
   // Create a computed property for userCode
-  const userCode = computed(() => {
-    return highlightedCode(props.value.code, props.value.language);
-  });
+  // const userCode = computed(() => {
+  //   return highlightedCode(props.value.code, props.value.language);
+  // });
 
   defineComponent<codeInstance>({
     name: 'Code',
