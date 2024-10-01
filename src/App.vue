@@ -2,7 +2,9 @@
 
 <template>
   Test:
-  <CodeBlock code="console.log('Hello, World!');" />
+  <CodeBlock
+    code="print('Hello, ' + name)"
+    language="pys" />
   End of App.vue
 </template>
 

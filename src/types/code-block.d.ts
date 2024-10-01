@@ -7,6 +7,7 @@ declare module 'code-block' {
     class: string;
     id: string;
     code: string;
+    language: string;
     codeClass: string;
   }
 

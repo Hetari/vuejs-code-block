@@ -12,6 +12,7 @@ const defaultProps = {
   class: '',
   id: '',
   code: '',
+  language: '',
   codeClass: ''
 };
 
