@@ -2,8 +2,7 @@ import type {
   ComponentPublicInstance,
   ExtractPropTypes,
   MaybeRefOrGetter,
-  PropType,
-  Slot
+  PropType
 } from 'vue';
 
 // Props goes here
@@ -48,11 +47,6 @@ export const codeBlockProps = () =>
 export type codeBlockProps = ExtractPropTypes<
   ReturnType<typeof codeBlockProps>
 >;
-
-export type codeBlockSlot = {
-  default: Slot;
-  trigger: Slot;
-};
 
 export type codeBlockExpose = {
   //   TODO: fix this
@@ -102,5 +96,3 @@ export type PublicCodeBlockProps = Partial<
     | 'linesHighlighted'
     | 'wordsHighlighted'
   >;
-
-export type PropertyFunction<T> = () => T;

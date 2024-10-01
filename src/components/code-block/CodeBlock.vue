@@ -9,7 +9,6 @@
   import { computed, defineComponent, toRefs } from 'vue';
   import { codeBlockProps, codeBlockInstance } from './types';
   import { useCodeBlock } from './use-code-block';
-  import { highlightedCode } from './utils';
 
   const props = defineProps(codeBlockProps());
 
