@@ -5,11 +5,19 @@ import type {
   PropType
 } from 'vue';
 
+type CodeProps = {
+  code: string;
+  language: string;
+  linesHighlighted: string[] | number[];
+  wordsHighlighted: string[];
+  asElement: string;
+};
+
 // Props goes here
 export const codeProps = () =>
   ({
     value: {
-      type: Object as PropType<{}>,
+      type: Object as PropType<CodeProps>,
       required: true
     }
   } as const);
@@ -17,7 +25,7 @@ export const codeProps = () =>
 export type codeProps = ExtractPropTypes<ReturnType<typeof codeProps>>;
 
 export type codeExpose = {
-  //   TODO: fix this
+  // TODO: fix this
 };
 
 export type codeInstance = ComponentPublicInstance<codeProps, codeExpose>;

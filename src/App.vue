@@ -1,8 +1,12 @@
 <template>
   Test:
   <CodeBlock
-    code="print('Hello, ' + name)"
-    language="py" />
+    code="console.log('Hello, ' + name)"
+    language="js"
+    code-class="codeClass"
+    :lines-highlighted="[1, 2]"
+    :words-highlighted="['log']"
+    as-element="" />
   End of App.vue
 </template>
 

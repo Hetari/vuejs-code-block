@@ -1,28 +1,27 @@
 <template>
-  <div
-    :class="class"
+  <Code
     :id="id"
-    :value="rootContext"></div>
+    :class="class"
+    :value="rootContext"></Code>
 </template>
 
 <script setup lang="ts">
+  import Code from '../code/Code.vue';
   import { computed, defineComponent, toRefs } from 'vue';
   import { codeBlockProps, codeBlockInstance } from './types';
   import { useCodeBlock } from './use-code-block';
 
   const props = defineProps(codeBlockProps());
 
+  // TODO: add theme
   const rootContext = computed(() => ({
+    // codeClass: props.codeClass,
     code: props.code.trim(),
     language: props.language,
-    words: props.wordsHighlighted || [],
-    lines: props.linesHighlighted || []
+    linesHighlighted: props.linesHighlighted,
+    wordsHighlighted: props.wordsHighlighted,
+    asElement: props.asElement
   }));
-
-  // Create a computed property for userCode
-  // const userCode = computed(() => {
-  //   return highlightedCode(props.code, props.language);
-  // });
 
   defineComponent<codeBlockInstance>({
     name: 'CodeBlock',

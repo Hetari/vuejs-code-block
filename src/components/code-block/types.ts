@@ -41,6 +41,11 @@ export const codeBlockProps = () =>
       type: Array as PropType<string[]>,
       required: false,
       default: []
+    },
+    asElement: {
+      type: String as PropType<string>,
+      required: false,
+      default: ''
     }
   } as const);
 
@@ -67,6 +72,7 @@ export interface UseCodeBlockProps {
   codeClass: MaybeRefOrGetter<string>;
   linesHighlighted: MaybeRefOrGetter<string[] | number[]>;
   wordsHighlighted: MaybeRefOrGetter<string[]>;
+  asElement: MaybeRefOrGetter<string | null>;
 }
 
 // Props goes here
@@ -83,6 +89,7 @@ export type PublicCodeBlockProps = Partial<
     | 'codeClass'
     | 'linesHighlighted'
     | 'wordsHighlighted'
+    | 'asElement'
   >
 > &
   // Then explicitly pick properties from UseCodeBlockProps to make them required
@@ -95,4 +102,5 @@ export type PublicCodeBlockProps = Partial<
     | 'codeClass'
     | 'linesHighlighted'
     | 'wordsHighlighted'
+    | 'asElement'
   >;
