@@ -9,6 +9,8 @@ declare module 'code-block' {
     code: string;
     language: string;
     codeClass: string;
+    linesHighlighted: string[] | number[];
+    wordsHighlighted: string[];
   }
 
   const CodeBlockType: DefineComponent<CodeBlockProps>;

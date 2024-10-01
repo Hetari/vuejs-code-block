@@ -1,10 +1,8 @@
-ٍSlot here
-
 <template>
   Test:
   <CodeBlock
     code="print('Hello, ' + name)"
-    language="pys" />
+    language="py" />
   End of App.vue
 </template>
 

@@ -13,7 +13,9 @@ const defaultProps = {
   id: '',
   code: '',
   language: '',
-  codeClass: ''
+  codeClass: '',
+  linesHighlighted: [],
+  wordsHighlighted: []
 };
 
 export function useCodeBlock(props: PublicCodeBlockProps) {

@@ -32,6 +32,16 @@ export const codeBlockProps = () =>
       type: String as PropType<string>,
       required: false,
       default: ''
+    },
+    linesHighlighted: {
+      type: Array as PropType<string[] | number[]>,
+      required: false,
+      default: []
+    },
+    wordsHighlighted: {
+      type: Array as PropType<string[]>,
+      required: false,
+      default: []
     }
   } as const);
 
@@ -61,6 +71,8 @@ export interface UseCodeBlockProps {
   code: MaybeRefOrGetter<string>;
   language: MaybeRefOrGetter<string>;
   codeClass: MaybeRefOrGetter<string>;
+  linesHighlighted: MaybeRefOrGetter<string[] | number[]>;
+  wordsHighlighted: MaybeRefOrGetter<string[]>;
 }
 
 // Props goes here
@@ -68,9 +80,27 @@ export interface UseCodeBlockProps {
 // but ensures that properties are required.
 export type PublicCodeBlockProps = Partial<
   // Omit properties from UseCodeBlockProps to make the remaining props optional
-  Omit<UseCodeBlockProps, 'code' | 'class' | 'id' | 'language' | 'codeClass'>
+  Omit<
+    UseCodeBlockProps,
+    | 'code'
+    | 'class'
+    | 'id'
+    | 'language'
+    | 'codeClass'
+    | 'linesHighlighted'
+    | 'wordsHighlighted'
+  >
 > &
   // Then explicitly pick properties from UseCodeBlockProps to make them required
-  Pick<UseCodeBlockProps, 'code' | 'class' | 'id' | 'language' | 'codeClass'>;
+  Pick<
+    UseCodeBlockProps,
+    | 'code'
+    | 'class'
+    | 'id'
+    | 'language'
+    | 'codeClass'
+    | 'linesHighlighted'
+    | 'wordsHighlighted'
+  >;
 
 export type PropertyFunction<T> = () => T;

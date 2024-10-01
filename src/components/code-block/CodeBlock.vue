@@ -1,12 +1,8 @@
 <template>
   <div
     :class="class"
-    :id="id">
-    <code
-      :class="codeClass"
-      v-html="userCode"></code>
-    <slot name="default"></slot>
-  </div>
+    :id="id"
+    :value="rootContext"></div>
 </template>
 
 <script setup lang="ts">
@@ -17,10 +13,17 @@
 
   const props = defineProps(codeBlockProps());
 
+  const rootContext = computed(() => ({
+    code: props.code.trim(),
+    language: props.language,
+    words: props.wordsHighlighted || [],
+    lines: props.linesHighlighted || []
+  }));
+
   // Create a computed property for userCode
-  const userCode = computed(() => {
-    return highlightedCode(props.code, props.language);
-  });
+  // const userCode = computed(() => {
+  //   return highlightedCode(props.code, props.language);
+  // });
 
   defineComponent<codeBlockInstance>({
     name: 'CodeBlock',
