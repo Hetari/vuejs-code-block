@@ -11,7 +11,7 @@
   import { computed, defineComponent, toRefs } from 'vue';
   import { codeProps, codeInstance } from './types';
   import { useCode } from './use-code';
-  import { highlightedCode } from '../code-block/utils';
+  import { highlightedCode } from '../utils';
 
   const props = defineProps(codeProps());
 

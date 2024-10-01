@@ -6,4 +6,4 @@ export { CodeBlock };
 export { install } from './components/';
 export * from './components/code-block/index';
 
-export * from './components/code-block/utils';
+export * from './components/utils';

@@ -16,7 +16,7 @@
   import { CodeBlock } from '../dist';
   const code = `console.log('Hello');
                 const name = 'World';
-`;
+                `;
 </script>
 
 <style>

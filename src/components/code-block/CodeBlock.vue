@@ -10,7 +10,7 @@
   import { computed, defineComponent, toRefs } from 'vue';
   import { codeBlockProps, codeBlockInstance } from './types';
   import { useCodeBlock } from './use-code-block';
-  import { parseCodeIntoLines } from './utils';
+  import { parseCodeIntoLines } from '../utils';
 
   const props = defineProps(codeBlockProps());
 
