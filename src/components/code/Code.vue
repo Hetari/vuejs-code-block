@@ -2,16 +2,19 @@
   <component
     :is="value.asElement || 'pre'"
     v-bind="$attrs">
-    <template></template>
-    {{ value }}
+    <template
+      v-for="(line, i) in value.code"
+      :key="i">
+      <Line :line="line"></Line>
+    </template>
   </component>
 </template>
 
 <script setup lang="ts">
-  import { computed, defineComponent, toRefs } from 'vue';
+  import { defineComponent, toRefs } from 'vue';
   import { codeProps, codeInstance } from './types';
   import { useCode } from './use-code';
-  import { highlightedCode } from '../utils';
+  import Line from '../line/Line.vue';
 
   const props = defineProps(codeProps());
 
