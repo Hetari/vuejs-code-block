@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress';
 
+const currentYear = new Date().getFullYear();
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/vuejs-code-block/',
@@ -17,16 +19,10 @@ export default defineConfig({
         target: '_self',
         rel: 'noopener'
       },
-      { text: 'Example', link: '/example' }
-    ],
-
-    sidebar: [
+      { text: 'Guide', link: '/get-started' },
       {
-        text: 'Example',
-        items: [
-          { text: 'Markdown Examples', link: '/example' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
+        text: 'Changelog',
+        items: [{ text: 'v0.0.1', link: '/' }]
       }
     ],
 
@@ -47,6 +43,31 @@ export default defineConfig({
         icon: 'npm',
         link: 'https://www.npmjs.com/package/vuejs-code-block'
       }
-    ]
+    ],
+
+    sidebar: [
+      {
+        text: 'Guide',
+        items: [
+          {
+            text: 'Get Started',
+            link: '/get-started'
+          },
+          {
+            text: 'Why',
+            link: '/why'
+          }
+        ]
+      },
+      {
+        text: 'Components',
+        collapsed: true
+      }
+    ],
+
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: `Copyright ©${currentYear}-present Hetari`
+    }
   }
 });

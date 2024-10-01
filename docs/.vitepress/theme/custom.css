@@ -5,14 +5,14 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #04a86f 30%,
+    #04a86f 10%,
     #59a4bd
   );
 
   --vp-home-hero-image-background-image: linear-gradient(
-    45deg,
-    #0de08c94 50%,
-    #07865a91 50%
+    0deg,
+    #243a4c 50%,
+    #00cf87 50%
   );
   --vp-home-hero-image-filter: blur(80px);
 }
@@ -21,7 +21,7 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #11eb9d 30%,
+    #11eb9d 10%,
     #41d1ff
   );
   --vp-home-hero-image-background-image: linear-gradient(
