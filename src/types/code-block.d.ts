@@ -7,6 +7,7 @@ declare module 'code-block' {
     class: string;
     id: string;
     code: string;
+    codeClass: string;
   }
 
   const CodeBlockType: DefineComponent<CodeBlockProps>;

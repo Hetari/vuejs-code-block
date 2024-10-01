@@ -26,7 +26,7 @@ export default defineConfig({
       formats: ['es', 'cjs'] // Output formats
     },
     rollupOptions: {
-      external: ['vue'], // Externalize dependencies
+      external: ['vue', 'prismjs/themes/prism.css'],
       output: {
         globals: {
           vue: 'Vue' // Global variable for Vue

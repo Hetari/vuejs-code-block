@@ -2,21 +2,18 @@
   <div
     :class="class"
     :id="id">
-    Vuejs Code Block
+    <code
+      :class="codeClass"
+      v-html="highlightedCode"></code>
+    <slot name="default"></slot>
   </div>
-  {{ code }}
-
-  Slot here default:
-  <slot name="default"></slot>
-
-  Slot here trigger:
-  <slot name="trigger"></slot>
 </template>
 
 <script setup lang="ts">
-  import { defineComponent, toRefs } from 'vue';
+  import { defineComponent, ref, toRefs } from 'vue';
   import { codeBlockProps, codeBlockInstance } from './types';
   import { useCodeBlock } from './use-code-block';
+  import { highlightedCode } from './utils';
 
   defineProps(codeBlockProps());
   defineComponent<codeBlockInstance>({

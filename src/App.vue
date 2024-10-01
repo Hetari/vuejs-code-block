@@ -2,16 +2,7 @@
 
 <template>
   Test:
-  <code>
-    <pre>
-  <CodeBlock
-    class="my-class"
-    id="my-id"
-    code="'sss'" />
-  <CodeBlock code="'123'" />
-  <CodeBlock code="'123sds'"> s </CodeBlock>
-  </pre>
-  </code>
+  <CodeBlock code="console.log('Hello, World!');" />
   End of App.vue
 </template>
 
