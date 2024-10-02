@@ -11,6 +11,7 @@ type CodeProps = {
   linesHighlighted: string[] | number[];
   wordsHighlighted: string[];
   asElement: string;
+  numbered: boolean;
 };
 
 // Props goes here

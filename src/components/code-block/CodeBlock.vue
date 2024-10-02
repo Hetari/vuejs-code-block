@@ -15,9 +15,10 @@
   const props = defineProps(codeBlockProps());
 
   // TODO: add theme
+  // codeClass: props.codeClass,
   const rootContext = computed(() => ({
-    // codeClass: props.codeClass,
     code: parseCodeIntoLines(props.code, props.language),
+    numbered: props.numbered,
     language: props.language,
     linesHighlighted: props.linesHighlighted,
     wordsHighlighted: props.wordsHighlighted,

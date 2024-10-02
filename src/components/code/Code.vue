@@ -1,11 +1,11 @@
 <template>
-  <component
-    :is="value.asElement || 'pre'"
-    v-bind="$attrs">
-    <template
-      v-for="(line, i) in value.code"
-      :key="i">
-      <Line :line="line"></Line>
+  <component 
+    :is="value.asElement || 'pre'" 
+    v-bind="$attrs" 
+    class="code"
+  >
+    <template v-for="(line, i) in value.code" :key="i">
+      <Line :number="i + 1" :numbered="value.numbered" :line="line"></Line>
     </template>
   </component>
 </template>
@@ -16,7 +16,7 @@
   import { useCode } from './use-code';
   import Line from '../line/Line.vue';
 
-  const props = defineProps(codeProps());
+  defineProps(codeProps());
 
   defineComponent<codeInstance>({
     name: 'Code',
@@ -26,3 +26,11 @@
     }
   });
 </script>
+
+<style>
+.code {
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+  background-color: #f5f5f5;
+}
+</style>
