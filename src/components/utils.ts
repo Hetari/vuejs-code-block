@@ -1,6 +1,25 @@
 import 'prismjs/themes/prism.min.css';
-// import 'prismjs/themes/prism-con.min.css';
 import { Prism } from './prism-langs';
+// import 'prismjs/themes/prism-con.min.css';
+
+export type AllLanguagesSupported =
+  'markup' |
+  'jsx' |
+  'tsx' |
+  'swift' |
+  'kotlin' |
+  'objectivec' |
+  'js-extras' |
+  'reason' |
+  'rust' |
+  'graphql' |
+  'yaml' |
+  'go' |
+  'cpp' |
+  'markdown' |
+  'python' |
+  'json';
+
 
 export function highlightedCode(code: string, language: string) {
   if (code === null || code === undefined) {
@@ -12,10 +31,10 @@ export function highlightedCode(code: string, language: string) {
   }
 
   // Check if the language is registered, fallback to 'markup' if not found
-  const prismLanguage = Prism.languages[language] || Prism.languages.markup;
+  const prismLanguage = Prism.languages[language];
 
-  console.log("Prism component for language '" + language + "' was not found.");
   if (!prismLanguage) {
+    console.log("Prism component for language '" + language + "' was not found.");
     throw new Error(
       `Prism component for language "${language}" was not found. Report this issue at https://github.com/hetari/vuejs-code-block`
     );

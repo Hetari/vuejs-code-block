@@ -4,7 +4,7 @@
     class="my-class"
     id="my-id"
     :code="code"
-    language="py"
+    language="python"
     code-class="codeClass"
     :lines-highlighted="[1, 2]"
     :words-highlighted="['log']"

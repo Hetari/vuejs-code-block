@@ -4,6 +4,7 @@ import type {
   MaybeRefOrGetter,
   PropType
 } from 'vue';
+import { AllLanguagesSupported } from '../utils';
 
 // Props goes here
 export const codeBlockProps = () =>
@@ -23,7 +24,7 @@ export const codeBlockProps = () =>
       required: true
     },
     language: {
-      type: String as PropType<string>,
+      type: String as PropType<AllLanguagesSupported>,
       required: false,
       default: 'markup'
     },
