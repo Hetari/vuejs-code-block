@@ -1,0 +1,24 @@
+{
+  "name": "generate-prism-languages",
+  "private": true,
+  "scripts": {
+    "build": "ts-node ./index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/lodash.flowright": "^3.5.9",
+    "@types/node": "^18.19.54",
+    "@types/prismjs": "^1.26.4",
+    "@types/uglify-js": "^3.17.5",
+    "picocolors": "^1.1.0",
+    "prismjs": "1.29.0",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.7.0",
+    "typescript": "5.6.2",
+    "uglify-js": "^3.19.3",
+    "lodash.flowright": "^3.5.0"
+  }
+}

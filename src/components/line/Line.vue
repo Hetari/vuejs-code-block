@@ -6,12 +6,9 @@
   import { defineComponent, onBeforeMount, toRefs } from 'vue';
   import { lineProps, lineInstance } from './types';
   import { useCode } from './use-line';
-  import { highlightedCode } from '../utils';
 
   const props = defineProps(lineProps());
-  // onBeforeMount(()=> {
-  //   highlightedCode(props.line);
-  // })
+
   defineComponent<lineInstance>({
     name: 'Line',
     props: lineProps(),

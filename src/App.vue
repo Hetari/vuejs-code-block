@@ -13,9 +13,12 @@
 </template>
 
 <script setup lang="ts">
-  import { CodeBlock } from '../dist';
+  import { CodeBlock } from './components/code-block';
   const code = `console.log('Hello');
   const name = 'World';
+  def greet(name) {
+     console.log('Hello, ' + name);
+  }
   `;
 </script>
 

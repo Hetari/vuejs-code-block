@@ -18,11 +18,6 @@
 
   const props = defineProps(codeProps());
 
-  // Create a computed property for userCode
-  // const userCode = computed(() => {
-  //   return highlightedCode(props.value.code, props.value.language);
-  // });
-
   defineComponent<codeInstance>({
     name: 'Code',
     props: codeProps(),

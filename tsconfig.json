@@ -11,5 +11,10 @@
     "types/**/*.ts",
     "types/**/*.tsx",
     "types/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "/src/components/generate-prism-languages/**"
   ]
 }

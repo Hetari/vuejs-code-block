@@ -20,13 +20,17 @@ export default defineConfig({
   build: {
     target: 'es2015',
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'), // Your library entry point
+      entry: resolve(__dirname, 'src/index.ts'),
       name: 'VueJsCodeBlock',
-      fileName: 'index', // Output file name
-      formats: ['es', 'cjs'] // Output formats
+      fileName: 'index',
+      formats: ['es', 'cjs']
     },
     rollupOptions: {
-      external: ['vue', 'prismjs/themes/prism.css'],
+      external: [
+        'vue',
+        'src/components/generate-prism-languages/**/*',
+        'src/components/generate-prism-languages/node_modules/*'
+      ],
       output: {
         globals: {
           vue: 'Vue' // Global variable for Vue
