@@ -2,10 +2,9 @@
 layout: doc
 ---
 
+# Why `vuejs-code-block`?
 
-# Why Choose vuejs-code-block?
-
-Building code blocks can be surprisingly complex, especially when you're aiming for more than just basic syntax highlighting. While there are many libraries available that handle syntax highlighting, the moment you require additional features—like **line numbers**, **line highlighting**, or **word-level customization**—things get tricky. 
+Building code blocks can be surprisingly complex, especially when you're aiming for more than just basic syntax highlighting. While there are many libraries available that handle syntax highlighting, the moment you require additional features—like **line numbers**, **line highlighting**, or **word-level customization**—things get tricky.
 
 If you're a technical writer or developer creating documentation or blog posts, these features are often essential. However, most syntax highlighting libraries fall short, either lacking these features entirely or making it difficult to customize or extend their functionality.
 
@@ -15,6 +14,7 @@ If you're a technical writer or developer creating documentation or blog posts, 
 
 <!-- TODO: -->
 <!-- **prismjs** -->
+
 `vuejs-code-block` is built on top of the widely-used library for syntax highlighting. We've extended it by adding additional features such as:
 
 1. **Line Numbers**: Toggle line numbers on or off.
@@ -22,7 +22,6 @@ If you're a technical writer or developer creating documentation or blog posts, 
 3. **Word-Level Customization**: Highlight individual words or phrases for emphasis or further explanation.
 
 All of these features are exposed as **primitive Vue components**, giving you full flexibility to compose and style your code blocks however you want.
-
 
 ## Why Vue.js?
 

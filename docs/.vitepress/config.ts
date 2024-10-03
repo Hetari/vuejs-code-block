@@ -20,10 +20,10 @@ export default defineConfig({
         rel: 'noopener'
       },
       { text: 'Guide', link: '/get-started' },
-      {
-        text: 'Changelog',
-        items: [{ text: 'v0.0.1', link: '/' }]
-      }
+      // {
+      //   text: 'Changelog',
+      //   items: [{ text: 'v0.0.1', link: '/' }]
+      // }
     ],
 
     socialLinks: [

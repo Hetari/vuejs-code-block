@@ -4,7 +4,6 @@ layout: doc
 
 # Get Started with vuejs-code-block
 
-
 ## Installation
 
 To get started, install the package via npm:
@@ -21,91 +20,97 @@ yarn add vuejs-code-block
 
 ## Basic Usage
 
-Once installed, you can start using the `CodeBlock` component to display syntax-highlighted code in your Vue app. Here’s a simple example:
+Once installed, you can start using the `CodeBlock` component in your `Vue 3` app to display syntax-highlighted code. Here’s a simple example:
 
-```vue
+```vue ts:line-numbers {1}
 <template>
-  <CodeBlock :code="exampleCode" language="javascript" />
+  <CodeBlock
+    :code="codeExample"
+    language="javascript"
+    class="custom-class"
+    id="example-code-block" />
 </template>
 
-<script setup>
-import { CodeBlock } from 'vuejs-code-block'
+<script setup lang="ts">
+  import { CodeBlock } from 'vuejs-code-block';
 
-const exampleCode = `function greet(name) {
+  const codeExample = `
+function greet(name) {
   console.log('Hello, ' + name);
 }
 
 greet('World');
-`
+`;
 </script>
 ```
 
-### Props:
-- `code`: The actual code you want to display.
-- `language`: The programming language for syntax highlighting.
+> [!WARNING] WARNING ❗
+> Make sure the content of the `codeExample` string does **NOT** have leading spaces.
+> The code should be formatted like this:
+>
+> ```ts
+> const codeExample = `
+> function greet(name) {
+>   console.log('Hello, ' + name);
+> }
+> 
+> greet('World');
+> `;
+> ```
+>
+> Avoid writing it with leading spaces like this:
+>
+> ```ts
+> const codeExample = `
+>   function greet(name) {
+>     console.log('Hello, ' + name);
+>   }
+> 
+>   greet('World');
+> `;
+> ```
+>
+> Incorrect formatting may cause unexpected whitespace in the code block.
 
-## Advanced Features
+<!-- - **`codeClass`** (optional): A custom CSS class for the `<code>` element inside the block. This allows you to style the code content specifically. -->
+<!-- - **`linesHighlighted`** (optional): An array of line numbers to be highlighted. Accepts an array of strings or numbers (e.g., `[1, 3]` to highlight the 1st and 3rd lines). -->
+<!-- - **`wordsHighlighted`** (optional): An array of specific words to be highlighted within the code. Accepts an array of strings (e.g., `['console', 'log']`). -->
 
-### Line Numbers
+## Props:
 
-To display line numbers alongside your code, simply use the `:show-line-numbers` prop.
+| Prop        | Type      | Required | Default | Description                                                             |
+| ----------- | --------- | -------- | ------- | ----------------------------------------------------------------------- |
+| `code`      | `string`  | Yes      | N/A     | The code you want to display, passed as a string.                       |
+| `language`  | `string`  | Yes      | N/A     | Specifies the programming language for syntax highlighting.             |
+| `asElement` | `string`  | No       | `<pre>` | Defines the HTML element wrapping the code block (defaults to `<pre>`). |
+| `numbered`  | `boolean` | No       | `false` | Displays line numbers when set to `true`.                               |
 
-```vue
-<CodeBlock :code="exampleCode" language="javascript" :show-line-numbers="true" />
-```
-
-### Line Highlighting
-
-You can also highlight specific lines by using the `:highlight-lines` prop.
-
-```vue
-<CodeBlock :code="exampleCode" language="javascript" :highlight-lines="[1, 3]" />
-```
-
-## Custom Styling
+<!-- ## Custom Styling
 
 One of the key features of **vuejs-code-block** is that it provides **unstyled** components, allowing you to style them however you like. For example, using CSS or Tailwind classes:
 
 ```vue
 <template>
   <div class="p-4 bg-gray-800 rounded-lg">
-    <CodeBlock :code="exampleCode" language="javascript" />
+    <CodeBlock
+      :code="exampleCode"
+      language="javascript" />
   </div>
 </template>
 
 <script setup>
-import { CodeBlock } from 'vuejs-code-block'
+  import { CodeBlock } from 'vuejs-code-block';
 
-const exampleCode = `function greet(name) {
+  const exampleCode = `function greet(name) {
   console.log('Hello, ' + name);
 }
 
 greet('World');
-`
+`;
 </script>
-
-<style>
-  .my-custom-code {
-    color: #00ff00;
-  }
-</style>
 ```
-
-## Customization & Configuration
-
-With **vuejs-code-block**, you can extend functionality to suit your needs:
-
-- **Custom Line Numbers**: Customize how line numbers appear.
-- **Syntax Themes**: Use Prism.js themes or create your own.
-- **Dynamic Code Blocks**: Bind code content from your app’s data for interactive code examples.
-
-## Conclusion
-
-You now have everything you need to start building powerful, customizable code blocks in your Vue.js or VitePress projects using **vuejs-code-block**. For more advanced use cases, be sure to explore the documentation and available props.
+-->
 
 ## Useful Links
 
 - [GitHub Repository](https://github.com/hetari/vuejs-code-block)
-- [Prism.js Documentation](https://prismjs.com/)
-- [Vue.js Documentation](https://vuejs.org/)
-

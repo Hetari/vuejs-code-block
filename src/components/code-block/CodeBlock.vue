@@ -15,7 +15,7 @@
           <span
             class="number"
             v-if="!props.numbered"
-            >{{ props.number }}</span
+            >{{ i + 1 }}</span
           >
         </div>
         <div v-html="line"></div>

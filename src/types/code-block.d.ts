@@ -13,7 +13,6 @@ declare module 'code-block' {
     wordsHighlighted: string[];
     asElement: string;
     numbered: boolean;
-    number: number;
   }
 
   const CodeBlockType: DefineComponent<CodeBlockProps>;
