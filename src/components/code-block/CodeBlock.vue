@@ -12,7 +12,14 @@
         v-for="(line, i) in code"
         :key="i">
         <div class="line">
-          <div v-html="line"></div>
+          <div
+            class="line-number"
+            v-if="props.numbered">
+            {{ i + 1 }}
+          </div>
+          <div class="code-line">
+            <div v-html="line"></div>
+          </div>
         </div>
       </template>
     </slot>
@@ -44,22 +51,22 @@
 
 <style>
   .code {
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     border-radius: 0.25rem;
-    background-color: #f5f5f5;
+    background-color: #121212;
+    color: #fff;
+    border: 1px solid #888;
   }
-  /*
+
   .line {
     display: flex;
     align-items: center;
-    gap: 1rem;
-  }
-  .number-container {
-    color: #666;
   }
 
-  .number {
-    font-size: 0.8rem;
+  .line-number {
+    color: #888;
     user-select: none;
-  } */
+    font-size: 0.85rem;
+    padding: 0.1rem 1rem 0.1rem 0;
+  }
 </style>
