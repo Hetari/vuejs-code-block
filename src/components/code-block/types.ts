@@ -1,4 +1,4 @@
-import { SupportedLanguageTypes } from 'code-block';
+import { SupportedLanguageTypes, themeType } from 'code-block';
 import type {
   ComponentPublicInstance,
   ExtractPropTypes,
@@ -52,6 +52,10 @@ export const codeBlockProps = () =>
       type: Boolean as PropType<boolean>,
       required: false,
       default: false
+    },
+    theme: {
+      type: String as PropType<themeType>,
+      required: true
     }
   } as const);
 
@@ -74,12 +78,13 @@ export interface UseCodeBlockProps {
   class: MaybeRefOrGetter<string | null>;
   id: MaybeRefOrGetter<string | null>;
   code: MaybeRefOrGetter<string>;
-  language: MaybeRefOrGetter<string>;
+  language: MaybeRefOrGetter<SupportedLanguageTypes>;
   codeClass: MaybeRefOrGetter<string>;
   linesHighlighted: MaybeRefOrGetter<string[] | number[]>;
   wordsHighlighted: MaybeRefOrGetter<string[]>;
   asElement: MaybeRefOrGetter<string | null>;
   numbered: MaybeRefOrGetter<boolean>;
+  theme: MaybeRefOrGetter<themeType>;
 }
 
 // Props goes here
@@ -98,6 +103,7 @@ export type PublicCodeBlockProps = Partial<
     | 'wordsHighlighted'
     | 'asElement'
     | 'numbered'
+    | 'theme'
   >
 > &
   // Then explicitly pick properties from UseCodeBlockProps to make them required
@@ -112,4 +118,5 @@ export type PublicCodeBlockProps = Partial<
     | 'wordsHighlighted'
     | 'asElement'
     | 'numbered'
+    | 'theme'
   >;

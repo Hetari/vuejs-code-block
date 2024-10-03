@@ -1,7 +1,6 @@
+import 'prismjs/themes/prism.min.css';
 import 'prismjs/themes/prism-dark.min.css';
-
 import { Prism } from './prism-langs';
-// import 'prismjs/themes/prism-con.min.css';
 
 export function highlightedCode(code: string, language: string) {
   if (code === null || code === undefined) {

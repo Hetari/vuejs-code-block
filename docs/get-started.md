@@ -25,6 +25,7 @@ Once installed, you can start using the `CodeBlock` component in your `Vue 3` ap
 ```vue ts:line-numbers {1}
 <template>
   <CodeBlock
+    theme="dark"
     :code="codeExample"
     language="javascript"
     class="custom-class"
@@ -82,6 +83,7 @@ greet('World');
 | ----------- | --------- | -------- | ------- | ----------------------------------------------------------------------- |
 | `code`      | `string`  | Yes      | N/A     | The code you want to display, passed as a string.                       |
 | `language`  | `string`  | Yes      | N/A     | Specifies the programming language for syntax highlighting.             |
+| `theme`     | `string`  | Yes      | N/A     | Specifies the theme to be used for syntax highlighting (light or dark). |
 | `asElement` | `string`  | No       | `<pre>` | Defines the HTML element wrapping the code block (defaults to `<pre>`). |
 | `numbered`  | `boolean` | No       | `false` | Displays line numbers when set to `true`.                               |
 
@@ -93,6 +95,7 @@ One of the key features of **vuejs-code-block** is that it provides **unstyled**
 <template>
   <div class="p-4 bg-gray-800 rounded-lg">
     <CodeBlock
+      theme="dark"
       :code="exampleCode"
       language="javascript" />
   </div>

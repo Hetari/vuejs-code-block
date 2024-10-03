@@ -2,7 +2,7 @@
   <!-- Code Block Component -->
   <component
     :id="props.id"
-    :class="props.class"
+    :class="`${props.class} ${props.theme}`"
     :is="props.asElement || 'pre'"
     v-bind="$attrs"
     class="code">
@@ -53,9 +53,12 @@
   .code {
     padding: 1rem;
     border-radius: 0.25rem;
+    border: 1px solid #888;
+  }
+
+  .dark.code {
     background-color: #121212;
     color: #fff;
-    border: 1px solid #888;
   }
 
   .line {

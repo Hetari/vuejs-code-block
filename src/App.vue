@@ -1,6 +1,7 @@
 <template>
   Test:
   <CodeBlock
+    theme="dark"
     :code="code"
     language="python"
     code-class="codeClass"
@@ -27,6 +28,6 @@ ss = 2
 
 <style>
   body {
-    background-color: #000;
+    /* background-color: #000; */
   }
 </style>

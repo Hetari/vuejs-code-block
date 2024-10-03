@@ -7,13 +7,15 @@ declare module 'code-block' {
     class: string;
     id: string;
     code: string;
-    language: string;
+    language: SupportedLanguage;
     codeClass: string;
     linesHighlighted: string[] | number[];
     wordsHighlighted: string[];
     asElement: string;
     numbered: boolean;
+    theme: themeType;
   }
+  type themeType = 'light' | 'dark';
 
   type SupportedLanguage =
     | 'plain'
@@ -72,5 +74,9 @@ declare module 'code-block' {
     | 'java';
 
   const CodeBlockType: DefineComponent<CodeBlockProps>;
-  export { CodeBlockType, SupportedLanguage as SupportedLanguageTypes };
+  export {
+    CodeBlockType,
+    SupportedLanguage as SupportedLanguageTypes,
+    themeType
+  };
 }
