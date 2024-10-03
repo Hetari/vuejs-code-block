@@ -3,11 +3,11 @@
 layout: home
 
 hero:
-  name: "Vuejs Code Block"
-  text: "Unstyled UI components to build powerful code blocks in Vue3"
+  name: 'Vuejs Code Block'
+  text: 'Unstyled UI components to build powerful code blocks in Vue3'
   tagline: Share it smoothly
   image:
-    src: /logo.png
+    src: /logo.webp
     alt: Vuejs Code Block Logo
   actions:
     - theme: brand
@@ -37,5 +37,4 @@ features:
   - icon: 🚀
     title: Modular & Lightweight Components
     details: Minimal dependency, with primitive components designed for flexibility. Compose the exact features you want in your code block.
-
 ---
