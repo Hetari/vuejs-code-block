@@ -1,3 +1,4 @@
+import { SupportedLanguageTypes } from 'code-block';
 import type {
   ComponentPublicInstance,
   ExtractPropTypes,
@@ -24,7 +25,7 @@ export const codeBlockProps = () =>
       required: true
     },
     language: {
-      type: String as PropType<string>,
+      type: String as PropType<SupportedLanguageTypes>,
       required: true
     },
     codeClass: {

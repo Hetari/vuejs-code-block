@@ -12,19 +12,20 @@
 // import * as uglify from 'uglify-js';
 
 // export const languagesToBundle = <const>[
-//   'markup',
+//   'vue',
 //   'jsx',
 //   'tsx',
 //   'swift',
 //   'kotlin',
+//   'java',
 //   'objectivec',
-//   'js-extras',
-//   'reason',
+//   'javascript',
 //   'rust',
 //   'graphql',
 //   'yaml',
 //   'go',
 //   'cpp',
+//   'c',
 //   'markdown',
 //   'python',
 //   'json'

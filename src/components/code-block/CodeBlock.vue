@@ -7,20 +7,15 @@
     v-bind="$attrs"
     class="code">
     <!-- Line Component -->
-    <template
-      v-for="(line, i) in code"
-      :key="i">
-      <div class="line">
-        <div class="number-container">
-          <span
-            class="number"
-            v-if="!props.numbered"
-            >{{ i + 1 }}</span
-          >
+    <slot>
+      <template
+        v-for="(line, i) in code"
+        :key="i">
+        <div class="line">
+          <div v-html="line"></div>
         </div>
-        <div v-html="line"></div>
-      </div>
-    </template>
+      </template>
+    </slot>
   </component>
 </template>
 
