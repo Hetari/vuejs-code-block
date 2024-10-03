@@ -12,6 +12,8 @@ declare module 'code-block' {
     linesHighlighted: string[] | number[];
     wordsHighlighted: string[];
     asElement: string;
+    numbered: boolean;
+    number: number;
   }
 
   const CodeBlockType: DefineComponent<CodeBlockProps>;

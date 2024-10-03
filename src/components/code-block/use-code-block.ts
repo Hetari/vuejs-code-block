@@ -16,7 +16,9 @@ const defaultProps = {
   codeClass: '',
   linesHighlighted: [],
   wordsHighlighted: [],
-  asElement: ''
+  asElement: '',
+  numbered: false,
+  number: 0
 };
 
 export function useCodeBlock(props: PublicCodeBlockProps) {
