@@ -1,5 +1,3 @@
-import 'prismjs/themes/prism.min.css';
-import 'prismjs/themes/prism-dark.min.css';
 import { Prism } from './prism-langs';
 
 export function highlightedCode(code: string, language: string) {

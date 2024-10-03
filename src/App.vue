@@ -22,7 +22,7 @@
   // const langs = ref(Object.keys(Prism.languages));
 
   const code = `print("Hello, World!")
-ss = 2
+  s = 2
 `;
 </script>
 
