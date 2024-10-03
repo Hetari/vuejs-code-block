@@ -26,7 +26,11 @@
 
 <script setup lang="ts">
   import { defineComponent, ref, toRefs } from 'vue';
-  import { codeBlockProps, codeBlockInstance } from './types';
+  import {
+    codeBlockProps,
+    codeBlockPropsTypes,
+    codeBlockInstance
+  } from './types';
   import { useCodeBlock } from './use-code-block';
   import { parseCodeIntoLines } from '../utils';
 
@@ -36,7 +40,7 @@
   defineComponent<codeBlockInstance>({
     name: 'CodeBlock',
     props: codeBlockProps(),
-    setup(props: codeBlockProps) {
+    setup(props: codeBlockPropsTypes) {
       useCodeBlock(toRefs(props));
     },
     slots: { default: 'Default' }

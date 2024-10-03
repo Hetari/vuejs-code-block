@@ -60,7 +60,7 @@ export const codeBlockProps = () =>
     }
   } as const);
 
-export type codeBlockProps = ExtractPropTypes<
+export type codeBlockPropsTypes = ExtractPropTypes<
   ReturnType<typeof codeBlockProps>
 >;
 
@@ -70,7 +70,7 @@ export type codeBlockExpose = {
 };
 
 export type codeBlockInstance = ComponentPublicInstance<
-  codeBlockProps,
+  codeBlockPropsTypes,
   codeBlockExpose
 >;
 
