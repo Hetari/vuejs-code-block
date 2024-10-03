@@ -53,9 +53,12 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@emotion/css": "^11.13.4",
+    "@theme-ui/prism": "^0.16.2",
     "@types/node": "^22.7.4",
     "@types/prismjs": "^1.26.4",
     "@vitejs/plugin-vue": "^5.1.2",
+    "prismjs": "^1.29.0",
     "typescript": "^5.5.3",
     "vite": "^5.4.1",
     "vite-plugin-dts": "^4.2.2",

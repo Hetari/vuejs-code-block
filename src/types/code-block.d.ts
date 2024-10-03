@@ -13,9 +13,29 @@ declare module 'code-block' {
     wordsHighlighted: string[];
     asElement: string;
     numbered: boolean;
-    theme: themeType;
+    theme: themesType;
+    fileName: string;
   }
-  type themeType = 'light' | 'dark';
+
+  type themesType =
+    | 'nightOwl'
+    | 'dracula'
+    | 'duotoneDark'
+    | 'duotoneLight'
+    | 'github'
+    | 'oceanicNext'
+    | 'prismCoy'
+    | 'prismDark'
+    | 'prismFunky'
+    | 'prismOkaidia'
+    | 'prismSolarizedLight'
+    | 'prismTomorrow'
+    | 'prismTwilight'
+    | 'prism'
+    | 'shadesOfPurple'
+    | 'ultramin'
+    | 'vsDark'
+    | 'none';
 
   type SupportedLanguage =
     | 'plain'
@@ -77,6 +97,6 @@ declare module 'code-block' {
   export {
     CodeBlockType,
     SupportedLanguage as SupportedLanguageTypes,
-    themeType
+    themesType
   };
 }

@@ -18,7 +18,8 @@ const defaultProps = {
   wordsHighlighted: [],
   asElement: '',
   numbered: false,
-  theme: ''
+  theme: '',
+  fileName: ''
 };
 
 export function useCodeBlock(props: PublicCodeBlockProps) {

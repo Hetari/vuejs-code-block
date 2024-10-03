@@ -1,11 +1,11 @@
 <template>
   Test:
   <CodeBlock
-    theme="dark"
+    theme="none"
     :code="code"
     language="python"
-    code-class="codeClass"
-    :numbered="true">
+    :numbered="true"
+    file-name="">
   </CodeBlock>
   <!-- :lines-highlighted="[1, 2]"
   :words-highlighted="['log']" -->
@@ -23,6 +23,7 @@
 
   const code = `print("Hello, World!")
   s = 2
+  sdsd = 3
 `;
 </script>
 

@@ -1,10 +1,11 @@
-import { SupportedLanguageTypes, themeType } from 'code-block';
+import { SupportedLanguageTypes, themesType } from 'code-block';
 import type {
   ComponentPublicInstance,
   ExtractPropTypes,
   MaybeRefOrGetter,
   PropType
 } from 'vue';
+
 // import { AllLanguagesSupported } from '../utils';
 
 // Props goes here
@@ -54,8 +55,13 @@ export const codeBlockProps = () =>
       default: false
     },
     theme: {
-      type: String as PropType<themeType>,
+      type: String as PropType<themesType>,
       required: true
+    },
+    fileName: {
+      type: String as PropType<string>,
+      required: false,
+      default: ''
     }
   } as const);
 
@@ -82,9 +88,10 @@ export interface UseCodeBlockProps {
   codeClass: MaybeRefOrGetter<string>;
   linesHighlighted: MaybeRefOrGetter<string[] | number[]>;
   wordsHighlighted: MaybeRefOrGetter<string[]>;
-  asElement: MaybeRefOrGetter<string | null>;
+  asElement: MaybeRefOrGetter<string>;
   numbered: MaybeRefOrGetter<boolean>;
-  theme: MaybeRefOrGetter<themeType>;
+  theme: MaybeRefOrGetter<themesType>;
+  fileName: MaybeRefOrGetter<string>;
 }
 
 // Props goes here
@@ -104,6 +111,7 @@ export type PublicCodeBlockProps = Partial<
     | 'asElement'
     | 'numbered'
     | 'theme'
+    | 'fileName'
   >
 > &
   // Then explicitly pick properties from UseCodeBlockProps to make them required
@@ -119,4 +127,5 @@ export type PublicCodeBlockProps = Partial<
     | 'asElement'
     | 'numbered'
     | 'theme'
+    | 'fileName'
   >;
