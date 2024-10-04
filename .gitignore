@@ -1,5 +1,7 @@
 docs/.vitepress/dist
 docs/.vitepress/cache
+src/components/generate-icons/**
+src/components/generate-prism-languages/**
 # Logs
 logs
 *.log

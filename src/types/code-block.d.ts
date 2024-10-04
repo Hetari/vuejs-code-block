@@ -38,59 +38,59 @@ declare module 'code-block' {
     | 'none';
 
   type SupportedLanguage =
-    | 'plain' //
-    | 'plaintext' //
-    | 'text' //
-    | 'txt' //
-    | 'extend' //
-    | 'insertBefore' //
-    | 'DFS' //
-    | 'markup' //
+    | 'plain'
+    | 'plaintext'
+    | 'text'
+    | 'txt'
+    | 'extend'
+    | 'insertBefore'
+    | 'DFS'
+    | 'markup'
     | 'html'
-    | 'mathml' //
+    | 'mathml'
     | 'svg'
-    | 'xml' //
-    | 'ssml' //
+    | 'xml'
+    | 'ssml'
     | 'atom'
-    | 'rss' //
+    | 'rss'
     | 'css'
-    | 'clike' //
+    | 'clike'
     | 'javascript'
     | 'js'
     | 'regex'
-    | 'actionscript' //
+    | 'actionscript'
     | 'coffeescript'
-    | 'coffee' //
-    | 'javadoclike' //
-    | 'yaml' //
-    | 'yml' //
+    | 'coffee'
+    | 'javadoclike'
+    | 'yaml'
+    | 'yml'
     | 'markdown'
     | 'md'
     | 'graphql'
-    | 'sql' //
+    | 'sql'
     | 'typescript'
     | 'ts'
-    | 'jsdoc' //
-    | 'flow' //
-    | 'n4js' //
-    | 'n4jsd' //
-    | 'jsx' //
-    | 'tsx' //
+    | 'jsdoc'
+    | 'flow'
+    | 'n4js'
+    | 'n4jsd'
+    | 'jsx'
+    | 'tsx'
     | 'swift'
     | 'kotlin'
-    | 'kt' //
-    | 'kts' //
+    | 'kt'
+    | 'kts'
     | 'c'
-    | 'objectivec' //
-    | 'objc' //
-    | 'reason' //
+    | 'objectivec'
+    | 'objc'
+    | 'reason'
     | 'rust'
     | 'go'
     | 'cpp'
     | 'python'
     | 'py'
-    | 'json' //
-    | 'webmanifest' //
+    | 'json'
+    | 'webmanifest'
     | 'java';
 
   const CodeBlockType: DefineComponent<CodeBlockProps>;
