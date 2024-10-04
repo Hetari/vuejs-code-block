@@ -7,7 +7,7 @@
       ref="codeBlock"
       :is="props.asElement || 'pre'"
       v-bind="$attrs">
-      <!-- Filename Component  -->
+      <!-- Header Component  -->
       <div class=""></div>
 
       <!-- Line Component -->
@@ -32,9 +32,15 @@
 </template>
 
 <script setup lang="ts">
-  import { defineComponent, onMounted, Ref, ref, toRefs, watch } from 'vue';
-  // @ts-ignore
-
+  import {
+    computed,
+    defineComponent,
+    onMounted,
+    Ref,
+    ref,
+    toRefs,
+    watch
+  } from 'vue';
   import {
     codeBlockProps,
     codeBlockPropsTypes,
@@ -46,17 +52,29 @@
   import { addThemeToCodeBlock, themes } from '../themes';
 
   const props = defineProps(codeBlockProps());
-  const code = ref<string[]>(parseCodeIntoLines(props.code, props.language));
   const codeBlock: Ref<HTMLDivElement | null> = ref(null);
 
+  const code = computed(() => parseCodeIntoLines(props.code, props.language));
+  const currentTheme = computed(() => themes[props.theme]);
+
   onMounted(() => {
-    addThemeToCodeBlock(codeBlock.value, themes[props.theme]);
+    addThemeToCodeBlock(codeBlock.value, currentTheme.value);
   });
 
-  watch(props, () => {
-    code.value = parseCodeIntoLines(props.code, props.language);
-    addThemeToCodeBlock(codeBlock.value, themes[props.theme]);
-  });
+  watch(
+    () => props.theme,
+    () => {
+      addThemeToCodeBlock(codeBlock.value, currentTheme.value);
+    }
+  );
+
+  // watch(
+  //   () => props.language,
+  //   () => {
+  //     addThemeToCodeBlock(codeBlock.value, currentTheme.value);
+  //   }
+  // );
+
   defineComponent<codeBlockInstance>({
     name: 'CodeBlock',
     props: codeBlockProps(),
@@ -68,6 +86,17 @@
 </script>
 
 <style>
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    padding: 15px;
+  }
+
   .vuejs-code-block pre {
     padding: 1rem;
     border-radius: 0.25rem;
