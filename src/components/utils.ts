@@ -36,6 +36,6 @@ export function parseCodeIntoLines(
 
   return code
     .split(/\r?\n/)
-    .map((line) => line.trimEnd())
-    .filter((l) => l.length > 0);
+    .map((line) => line.replace(/\s+$/, ''))
+    .filter((line) => line.length > 0 || line === '');
 }
