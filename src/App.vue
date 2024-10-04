@@ -3,7 +3,7 @@
   <CodeBlock
     theme="dracula"
     :code="code"
-    language="js"
+    language="python"
     :numbered="true"
     file-name="">
   </CodeBlock>

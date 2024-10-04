@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 import dts from 'vite-plugin-dts';
 import libCss from 'vite-plugin-libcss';
+import svgLoader from 'vite-svg-loader';
 
 export default defineConfig({
   plugins: [
@@ -12,7 +13,10 @@ export default defineConfig({
       insertTypesEntry: true,
       tsconfigPath: './tsconfig.json'
     }),
-    libCss()
+    libCss(),
+    svgLoader({
+      defaultImport: 'url'
+    })
   ],
   resolve: {
     alias: {

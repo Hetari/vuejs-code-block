@@ -1,4 +1,8 @@
 <template>
+  <img
+    width="240"
+    :src="icons[props.language]"
+    alt="" />
   <!-- Code Block Component -->
   <div
     :id="props.id"
@@ -32,6 +36,7 @@
 </template>
 
 <script setup lang="ts">
+  import { icons } from '../icons';
   import {
     computed,
     defineComponent,
@@ -52,6 +57,8 @@
   import { addThemeToCodeBlock, themes } from '../themes';
 
   const props = defineProps(codeBlockProps());
+  const langIcon = ref(`../icons/${props.language}.svg`);
+
   const codeBlock: Ref<HTMLDivElement | null> = ref(null);
 
   const code = computed(() => parseCodeIntoLines(props.code, props.language));
