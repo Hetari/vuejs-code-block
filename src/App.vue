@@ -1,9 +1,9 @@
 <template>
   Test:
   <CodeBlock
-    theme="none"
+    theme="dracula"
     :code="code"
-    language="python"
+    language="js"
     :numbered="true"
     file-name="">
   </CodeBlock>
@@ -16,19 +16,16 @@
 </template>
 
 <script setup lang="ts">
+  // import { CodeBlock } from '../dist';
+
   import { CodeBlock } from './components/code-block';
 
   // import { Prism } from './components/prism-langs';
   // const langs = ref(Object.keys(Prism.languages));
 
   const code = `print("Hello, World!")
-  s = 2
-  sdsd = 3
+s = 2
+def add(a, b):
+const ant = 1
 `;
 </script>
-
-<style>
-  body {
-    /* background-color: #000; */
-  }
-</style>

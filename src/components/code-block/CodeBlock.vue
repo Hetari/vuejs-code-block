@@ -68,13 +68,6 @@
     }
   );
 
-  // watch(
-  //   () => props.language,
-  //   () => {
-  //     addThemeToCodeBlock(codeBlock.value, currentTheme.value);
-  //   }
-  // );
-
   defineComponent<codeBlockInstance>({
     name: 'CodeBlock',
     props: codeBlockProps(),
