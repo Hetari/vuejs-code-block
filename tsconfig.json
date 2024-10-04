@@ -2,14 +2,18 @@
   "compilerOptions": {
     "declaration": true,
     "declarationDir": "./dist/types",
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
+    "types/**/*.tsx",
     "src/**/*.vue",
     "types/**/*.ts",
-    "types/**/*.tsx",
     "types/**/*.vue"
   ],
   "exclude": [
