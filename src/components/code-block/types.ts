@@ -62,6 +62,11 @@ export const codeBlockProps = () =>
       type: String as PropType<string>,
       required: false,
       default: ''
+    },
+    showHeader: {
+      type: Boolean as PropType<boolean>,
+      required: false,
+      default: false
     }
   } as const);
 

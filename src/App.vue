@@ -1,31 +1,32 @@
 <template>
-  Test:
+  <h1>Vuejs Code Block UI Component</h1>
+
   <CodeBlock
+    class="pt-8"
     theme="dracula"
     :code="code"
     language="python"
     :numbered="true"
-    file-name="">
+    :show-header="true"
+    file-name="ss">
   </CodeBlock>
-  <!-- :lines-highlighted="[1, 2]"
-  :words-highlighted="['log']" -->
-  End of App.vue
-  <!-- <pre>
-    {{ langs }}
-  </pre> -->
 </template>
 
 <script setup lang="ts">
-  // import { CodeBlock } from '../dist';
-
   import { CodeBlock } from './components/code-block';
-
-  // import { Prism } from './components/prism-langs';
-  // const langs = ref(Object.keys(Prism.languages));
-
   const code = `print("Hello, World!")
 s = 2
 def add(a, b):
 const ant = 1
 `;
+
+  // import { CodeBlock } from '../dist';
+  // import { Prism } from './components/prism-langs';
+  // const langs = ref(Object.keys(Prism.languages));
 </script>
+
+<style>
+  .pt-8 {
+    padding-top: 2rem;
+  }
+</style>

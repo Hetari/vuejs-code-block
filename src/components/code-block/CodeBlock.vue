@@ -1,8 +1,4 @@
 <template>
-  <img
-    width="240"
-    :src="icons[props.language]"
-    alt="" />
   <!-- Code Block Component -->
   <div
     :id="props.id"
@@ -10,9 +6,21 @@
     <component
       ref="codeBlock"
       :is="props.asElement || 'pre'"
-      v-bind="$attrs">
+      v-bind="$attrs"
+      :style="props.showHeader ? '' : 'padding-top: 1rem'">
       <!-- Header Component  -->
-      <div class=""></div>
+      <div
+        v-if="props.showHeader"
+        class="header">
+        <div class="file-name">
+          <img
+            width="18"
+            :src="icons[props.language]"
+            alt="" />
+          <p>{{ props.fileName }}</p>
+        </div>
+        <div class="copy"></div>
+      </div>
 
       <!-- Line Component -->
       <slot>
@@ -57,7 +65,6 @@
   import { addThemeToCodeBlock, themes } from '../themes';
 
   const props = defineProps(codeBlockProps());
-  const langIcon = ref(`../icons/${props.language}.svg`);
 
   const codeBlock: Ref<HTMLDivElement | null> = ref(null);
 
@@ -98,20 +105,45 @@
   }
 
   .vuejs-code-block pre {
-    padding: 1rem;
+    padding-bottom: 1rem;
     border-radius: 0.25rem;
     border: 0.5px solid #888;
   }
 
-  .vuejs-code-block pre .line {
+  .vuejs-code-block pre .header {
+    padding: 0.5rem 1rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.001);
+    backdrop-filter: brightness(0.9);
+  }
+
+  .vuejs-code-block pre .header .file-name {
+    border-radius: 0.25rem;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 5rem;
+    padding-left: 0.25rem;
+  }
+
+  .vuejs-code-block pre .header .file-name p {
+    font-size: 1rem;
+  }
+
+  .vuejs-code-block pre .line {
+    padding: 0 1rem;
+
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
   }
 
   .vuejs-code-block pre .line-number {
     color: #888;
     user-select: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 0.1rem 1rem 0.1rem 0;
   }
 </style>
