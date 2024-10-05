@@ -2,6 +2,8 @@
 
 [![NPM version](https://img.shields.io/npm/v/vuejs-code-block.svg)](https://www.npmjs.com/package/vuejs-code-block)
 
+Documentation: [https://vuejs-code-block.netlify.app/](https://vuejs-code-block.netlify.app/)
+
 > [!IMPORTANT]
 > For now this package has default themes, but in the future, it will be fully unstyled, allowing you to style it however you like.
 
@@ -114,3 +116,26 @@ greet('World');
 </script>
 ```
 -->
+
+## Themes:
+
+| Theme Name                  | Image                                                                 |
+| --------------------------- | --------------------------------------------------------------------- |
+| Dracula                     | ![Dracula Theme](./docs/public/draculaTheme.webp)                     |
+| Duotone Dark                | ![Duotone Dark Theme](./docs/public/duotoneDarkTheme.webp)            |
+| Duotone Light               | ![Duotone Light Theme](./docs/public/duotoneLightTheme.webp)          |
+| GitHub                      | ![GitHub Theme](./docs/public/githubTheme.webp)                       |
+| Night Owl                   | ![Night Owl Theme](./docs/public/nightOwlTheme.webp)                  |
+| None                        | ![None](./docs/public/none.webp)                                      |
+| Oceanic Next                | ![Oceanic Next Theme](./docs/public/oceanicNextTheme.webp)            |
+| Prism Dark                  | ![Prism Dark Theme](./docs/public/prismDarkTheme.webp)                |
+| Prism Funky                 | ![Prism Funky Theme](./docs/public/prismFunkyTheme.webp)              |
+| Prism Okaidia               | ![Prism Okaidia Theme](./docs/public/prismOkaidiaTheme.webp)          |
+| Prism Solarized Light Theme | ![Prism Solarized Light](./docs/public/prismSolarizedLightTheme.webp) |
+| Prism                       | ![Prism Theme](./docs/public/prismTheme.webp)                         |
+| Prism Theme Coy             | ![Prism Theme Coy](./docs/public/prismThemeCoy.webp)                  |
+| Prism Tomorrow              | ![Prism Tomorrow Theme](./docs/public/prismTomorrowTheme.webp)        |
+| Prism Twilight              | ![Prism Twilight Theme](./docs/public/prismTwilightTheme.webp)        |
+| Shades of Purple            | ![Shades of Purple](./docs/public/shadesOfPurple.webp)                |
+| UltraMin                    | ![UltraMin Theme](./docs/public/ultraminTheme.webp)                   |
+| VS Dark                     | ![VS Dark Theme](./docs/public/vsDarkTheme.webp)                      |
