@@ -19,7 +19,8 @@ const defaultProps = {
   asElement: '',
   numbered: false,
   theme: '',
-  fileName: ''
+  fileName: '',
+  showHeader: false
 };
 
 export function useCodeBlock(props: PublicCodeBlockProps) {

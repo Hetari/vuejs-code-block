@@ -2,7 +2,11 @@
 
 [![NPM version](https://img.shields.io/npm/v/vuejs-code-block.svg)](https://www.npmjs.com/package/vuejs-code-block)
 
-Documentation: [https://vuejs-code-block.netlify.app/](https://vuejs-code-block.netlify.app/)
+<div align="center">
+  <a href="https://hetari.github.io/vuejs-code-block/">
+    <img src="./docs/public/logo.webp" width="250" />
+  </a>
+</div>
 
 > [!IMPORTANT]
 > For now this package has default themes, but in the future, it will be fully unstyled, allowing you to style it however you like.
@@ -28,23 +32,22 @@ Once installed, you can start using the `CodeBlock` component in your `Vue 3` ap
 ```vue ts:line-numbers {1}
 <template>
   <CodeBlock
-    theme="dark"
-    :code="codeExample"
-    language="javascript"
-    class="custom-class"
-    id="example-code-block" />
+    :code="code"
+    :numbered="true"
+    :show-header="true"
+    file-name="codeBlock.ts"
+    language="ts"
+    theme="dracula">
+  </CodeBlock>
 </template>
 
 <script setup lang="ts">
-  import { CodeBlock } from 'vuejs-code-block';
-
-  const codeExample = `
-function greet(name) {
-  console.log('Hello, ' + name);
-}
-
-greet('World');
-`;
+  import { CodeBlock } from './components/code-block';
+  const code = `const name =  'Vuejs Code Block';
+const usrls = {
+  github: 'https://github.com/hetari/vuejs-code-block',
+  docs: 'https://hetari.github.io/vuejs-code-block/'
+};`;
 </script>
 ```
 
@@ -82,13 +85,15 @@ greet('World');
 
 ## Props:
 
-| Prop        | Type      | Required | Default | Description                                                             |
-| ----------- | --------- | -------- | ------- | ----------------------------------------------------------------------- |
-| `code`      | `string`  | Yes      | N/A     | The code you want to display, passed as a string.                       |
-| `language`  | `string`  | Yes      | N/A     | Specifies the programming language for syntax highlighting.             |
-| `theme`     | `string`  | Yes      | N/A     | Specifies the theme to be used for syntax highlighting (light or dark). |
-| `asElement` | `string`  | No       | `<pre>` | Defines the HTML element wrapping the code block (defaults to `<pre>`). |
-| `numbered`  | `boolean` | No       | `false` | Displays line numbers when set to `true`.                               |
+| Prop         | Type      | Required | Default | Description                                                                                |
+| ------------ | --------- | -------- | ------- | ------------------------------------------------------------------------------------------ |
+| `code`       | `string`  | Yes      | N/A     | The code you want to display, passed as a string.                                          |
+| `language`   | `string`  | Yes      | N/A     | Specifies the programming language for syntax highlighting.                                |
+| `theme`      | `string`  | Yes      | N/A     | Specifies the theme to be used for syntax highlighting (light or dark).                    |
+| `asElement`  | `string`  | No       | `<pre>` | Defines the HTML element wrapping the code block (defaults to `<pre>`).                    |
+| `numbered`   | `boolean` | No       | `false` | Displays line numbers when set to `true`.                                                  |
+| `showHeader` | `boolean` | No       | `true`  | Displays the code block header (title, language icon, and copy button) when set to `true`. |
+| `file-name`  | `string`  | No       | N/A     | The name of the file to be displayed in the header.                                        |
 
 <!-- ## Custom Styling
 

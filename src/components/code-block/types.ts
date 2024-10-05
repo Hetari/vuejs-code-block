@@ -97,6 +97,7 @@ export interface UseCodeBlockProps {
   numbered: MaybeRefOrGetter<boolean>;
   theme: MaybeRefOrGetter<themesType>;
   fileName: MaybeRefOrGetter<string>;
+  showHeader: MaybeRefOrGetter<boolean>;
 }
 
 // Props goes here
@@ -117,6 +118,7 @@ export type PublicCodeBlockProps = Partial<
     | 'numbered'
     | 'theme'
     | 'fileName'
+    | 'showHeader'
   >
 > &
   // Then explicitly pick properties from UseCodeBlockProps to make them required
@@ -133,4 +135,5 @@ export type PublicCodeBlockProps = Partial<
     | 'numbered'
     | 'theme'
     | 'fileName'
+    | 'showHeader'
   >;

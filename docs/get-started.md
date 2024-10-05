@@ -79,13 +79,15 @@ greet('World');
 
 ## Props:
 
-| Prop        | Type      | Required | Default | Description                                                             |
-| ----------- | --------- | -------- | ------- | ----------------------------------------------------------------------- |
-| `code`      | `string`  | Yes      | N/A     | The code you want to display, passed as a string.                       |
-| `language`  | `string`  | Yes      | N/A     | Specifies the programming language for syntax highlighting.             |
-| `theme`     | `string`  | Yes      | N/A     | Specifies the theme to be used for syntax highlighting (light or dark). |
-| `asElement` | `string`  | No       | `<pre>` | Defines the HTML element wrapping the code block (defaults to `<pre>`). |
-| `numbered`  | `boolean` | No       | `false` | Displays line numbers when set to `true`.                               |
+| Prop         | Type      | Required | Default | Description                                                                                |
+| ------------ | --------- | -------- | ------- | ------------------------------------------------------------------------------------------ |
+| `code`       | `string`  | Yes      | N/A     | The code you want to display, passed as a string.                                          |
+| `language`   | `string`  | Yes      | N/A     | Specifies the programming language for syntax highlighting.                                |
+| `theme`      | `string`  | Yes      | N/A     | Specifies the theme to be used for syntax highlighting (light or dark).                    |
+| `asElement`  | `string`  | No       | `<pre>` | Defines the HTML element wrapping the code block (defaults to `<pre>`).                    |
+| `numbered`   | `boolean` | No       | `false` | Displays line numbers when set to `true`.                                                  |
+| `showHeader` | `boolean` | No       | `true`  | Displays the code block header (title, language icon, and copy button) when set to `true`. |
+| `file-name`  | `string`  | No       | N/A     | The name of the file to be displayed in the header.                                        |
 
 <!-- ## Custom Styling
 
