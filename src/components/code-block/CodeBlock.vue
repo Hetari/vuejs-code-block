@@ -9,6 +9,7 @@
       v-bind="$attrs"
       :style="props.showHeader ? '' : 'padding-top: 1rem'">
       <!-- Header Component  -->
+
       <div
         v-if="props.showHeader"
         class="header">
@@ -17,9 +18,27 @@
             width="18"
             :src="icons[props.language]"
             alt="" />
-          <p>{{ props.fileName }}</p>
+          <span>{{ props.fileName }}</span>
         </div>
-        <div class="copy"></div>
+        <div class="actions">
+          <button
+            type="button"
+            class="copy-button">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              class="copy-icon">
+              <path
+                d="M13 10.75h-1.25a2 2 0 0 0-2 2v8.5a2 2 0 0 0 2 2h8.5a2 2 0 0 0 2-2v-8.5a2 2 0 0 0-2-2H19"></path>
+              <path
+                d="M18 12.25h-4a1 1 0 0 1-1-1v-1.5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1.5a1 1 0 0 1-1 1ZM13.75 16.25h4.5M13.75 19.25h4.5"></path>
+            </svg>
+          </button>
+        </div>
       </div>
 
       <!-- Line Component -->
@@ -93,29 +112,17 @@
 </script>
 
 <style>
-  *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  body {
-    padding: 15px;
-  }
-
   .vuejs-code-block pre {
     padding-bottom: 1rem;
-    border-radius: 0.25rem;
+    border-radius: 0.3rem;
     border: 0.5px solid #888;
   }
 
   .vuejs-code-block pre .header {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1rem;
     background-color: rgba(0, 0, 0, 0.001);
     backdrop-filter: brightness(0.9);
   }
@@ -124,12 +131,39 @@
     border-radius: 0.25rem;
     display: flex;
     gap: 0.5rem;
-    padding: 0.5rem 5rem;
+    padding: 0.5rem 1.5rem;
     padding-left: 0.25rem;
+
+    /* align-items: center;
+    border-bottom: 1px solid #7dd3fc; */
   }
 
   .vuejs-code-block pre .header .file-name p {
     font-size: 1rem;
+  }
+
+  .vuejs-code-block pre .header .actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .vuejs-code-block pre .header .actions .copy-button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    color: #64748b;
+    transition: color 150ms ease-in-out;
+  }
+
+  .vuejs-code-block pre .header .actions .copy-button:hover {
+    color: #94a3b8;
+  }
+
+  .vuejs-code-block pre .header .actions .copy-icon {
+    width: 2rem;
+    height: 2rem;
   }
 
   .vuejs-code-block pre .line {
