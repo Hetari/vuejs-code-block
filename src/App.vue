@@ -7,7 +7,7 @@
     language="python"
     :numbered="true"
     :show-header="true"
-    file-name="ss">
+    file-name="ss.py">
   </CodeBlock>
 </template>
 
