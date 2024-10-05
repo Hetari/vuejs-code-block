@@ -2,7 +2,7 @@
   <h1 class="">Vuejs Code Block UI Component</h1>
 
   <CodeBlock
-    theme="ultramin"
+    theme="dracula"
     :code="code"
     language="python"
     :numbered="true"

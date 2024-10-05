@@ -20,7 +20,9 @@
             alt="" />
           <span>{{ props.fileName }}</span>
         </div>
-        <div class="actions">
+        <div
+          @click="copyCodeToClipboard(props.code)"
+          class="actions">
           <button
             type="button"
             class="copy-button">
@@ -79,14 +81,12 @@
     codeBlockInstance
   } from './types';
   import { useCodeBlock } from './use-code-block';
-  import { parseCodeIntoLines } from '../utils';
-
+  import { copyCodeToClipboard, parseCodeIntoLines } from '../utils';
   import { addThemeToCodeBlock, themes } from '../themes';
 
   const props = defineProps(codeBlockProps());
 
   const codeBlock: Ref<HTMLDivElement | null> = ref(null);
-
   const code = computed(() => parseCodeIntoLines(props.code, props.language));
   const currentTheme = computed(() => themes[props.theme]);
 
@@ -133,9 +133,6 @@
     gap: 0.5rem;
     padding: 0.5rem 1.5rem;
     padding-left: 0.25rem;
-
-    /* align-items: center;
-    border-bottom: 1px solid #7dd3fc; */
   }
 
   .vuejs-code-block pre .header .file-name p {
@@ -154,6 +151,8 @@
     padding: 0;
     cursor: pointer;
     color: #64748b;
+    background: rgba(127.5, 127.5, 127.5, 0.15);
+    border-radius: 0.5rem;
     transition: color 150ms ease-in-out;
   }
 

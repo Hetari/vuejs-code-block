@@ -39,3 +39,7 @@ export function parseCodeIntoLines(
     .map((line) => line.replace(/\s+$/, ''))
     .filter((line) => line.length > 0 || line === '');
 }
+
+export function copyCodeToClipboard(code: string) {
+  window.navigator.clipboard.writeText(code);
+}
