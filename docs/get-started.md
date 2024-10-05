@@ -116,26 +116,26 @@ greet('World');
 
 ## Themes:
 
-| Theme Name                  | Image                                                            |
-| --------------------------- | ---------------------------------------------------------------- |
-| Dracula                     | ![Dracula Theme](./images/draculaTheme.webp)                     |
-| Duotone Dark                | ![Duotone Dark Theme](./images/duotoneDarkTheme.webp)            |
-| Duotone Light               | ![Duotone Light Theme](./images/duotoneLightTheme.webp)          |
-| GitHub                      | ![GitHub Theme](./images/githubTheme.webp)                       |
-| Night Owl                   | ![Night Owl Theme](./images/nightOwlTheme.webp)                  |
-| None                        | ![None](./images/none.webp)                                      |
-| Oceanic Next                | ![Oceanic Next Theme](./images/oceanicNextTheme.webp)            |
-| Prism Dark                  | ![Prism Dark Theme](./images/prismDarkTheme.webp)                |
-| Prism Funky                 | ![Prism Funky Theme](./images/prismFunkyTheme.webp)              |
-| Prism Okaidia               | ![Prism Okaidia Theme](./images/prismOkaidiaTheme.webp)          |
-| Prism Solarized Light Theme | ![Prism Solarized Light](./images/prismSolarizedLightTheme.webp) |
-| Prism                       | ![Prism Theme](./images/prismTheme.webp)                         |
-| Prism Theme Coy             | ![Prism Theme Coy](./images/prismThemeCoy.webp)                  |
-| Prism Tomorrow              | ![Prism Tomorrow Theme](./images/prismTomorrowTheme.webp)        |
-| Prism Twilight              | ![Prism Twilight Theme](./images/prismTwilightTheme.webp)        |
-| Shades of Purple            | ![Shades of Purple](./images/shadesOfPurple.webp)                |
-| UltraMin                    | ![UltraMin Theme](./images/ultraminTheme.webp)                   |
-| VS Dark                     | ![VS Dark Theme](./images/vsDarkTheme.webp)                      |
+| Theme Name                  | Image                                                    |
+| --------------------------- | -------------------------------------------------------- |
+| Dracula                     | ![Dracula Theme](/draculaTheme.webp)                     |
+| Duotone Dark                | ![Duotone Dark Theme](/duotoneDarkTheme.webp)            |
+| Duotone Light               | ![Duotone Light Theme](/duotoneLightTheme.webp)          |
+| GitHub                      | ![GitHub Theme](/githubTheme.webp)                       |
+| Night Owl                   | ![Night Owl Theme](/nightOwlTheme.webp)                  |
+| None                        | ![None](/none.webp)                                      |
+| Oceanic Next                | ![Oceanic Next Theme](/oceanicNextTheme.webp)            |
+| Prism Dark                  | ![Prism Dark Theme](/prismDarkTheme.webp)                |
+| Prism Funky                 | ![Prism Funky Theme](/prismFunkyTheme.webp)              |
+| Prism Okaidia               | ![Prism Okaidia Theme](/prismOkaidiaTheme.webp)          |
+| Prism Solarized Light Theme | ![Prism Solarized Light](/prismSolarizedLightTheme.webp) |
+| Prism                       | ![Prism Theme](/prismTheme.webp)                         |
+| Prism Theme Coy             | ![Prism Theme Coy](/prismThemeCoy.webp)                  |
+| Prism Tomorrow              | ![Prism Tomorrow Theme](/prismTomorrowTheme.webp)        |
+| Prism Twilight              | ![Prism Twilight Theme](/prismTwilightTheme.webp)        |
+| Shades of Purple            | ![Shades of Purple](/shadesOfPurple.webp)                |
+| UltraMin                    | ![UltraMin Theme](/ultraminTheme.webp)                   |
+| VS Dark                     | ![VS Dark Theme](/vsDarkTheme.webp)                      |
 
 ## Useful Links
 
