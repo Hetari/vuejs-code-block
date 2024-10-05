@@ -134,10 +134,14 @@
 
   .vuejs-code-block pre .line {
     padding: 0 1rem;
-
     display: flex;
-    align-items: center;
+    align-items: start;
     font-size: 1rem;
+  }
+
+  .vuejs-code-block pre .line span {
+    white-space: pre-wrap;
+    word-break: break-word;
   }
 
   .vuejs-code-block pre .line-number {

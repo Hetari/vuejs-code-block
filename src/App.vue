@@ -15,7 +15,7 @@
 <script setup lang="ts">
   import { CodeBlock } from './components/code-block';
   const code = `print("Hello, World!")
-s = 2
+s = "lorem ipsum dolor sit amet consect etur adipiscing elit"
 def add(a, b):
 const ant = 1
 `;
