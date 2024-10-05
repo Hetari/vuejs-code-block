@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/vuejs-code-block.svg)](https://www.npmjs.com/package/vuejs-code-block)
 
-> [!IMPORTANT] Note
+> [!IMPORTANT]
 > For now this package has default themes, but in the future, it will be fully unstyled, allowing you to style it however you like.
 
 ## Installation
