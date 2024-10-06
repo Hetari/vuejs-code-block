@@ -2,7 +2,7 @@
   "type": "module",
   "private": false,
   "name": "vuejs-code-block",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vue 3 component of unstyled UI components to build powerful code blocks.",
   "author": {
     "name": "Ebraheem Alhetari",

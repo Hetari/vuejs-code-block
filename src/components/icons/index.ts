@@ -26,7 +26,10 @@ const aliasMap: Record<string, string> = {
   text: 'document',
   webmanifest: 'json',
   xml: 'markup',
-  yml: 'yaml'
+  yml: 'yaml',
+  bash: 'console',
+  shell: 'console',
+  gherkin: 'cucumber'
 };
 
 export const icons = Object.fromEntries(

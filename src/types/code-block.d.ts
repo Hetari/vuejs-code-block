@@ -83,7 +83,12 @@ declare module 'code-block' {
     | 'webmanifest'
     | 'xml'
     | 'yaml'
-    | 'yml';
+    | 'yml'
+    | 'php'
+    | 'SQL'
+    | 'gherkin'
+    | 'bash'
+    | 'shell';
 
   const CodeBlockType: DefineComponent<CodeBlockProps>;
   export {
