@@ -1,5 +1,7 @@
 # Vuejs Code Block
 
+## Enjoying my project? Please show your appreciation by starring it on GitHub! ⭐
+
 [![NPM version](https://img.shields.io/npm/v/vuejs-code-block.svg)](https://www.npmjs.com/package/vuejs-code-block)
 
 <div align="center">
